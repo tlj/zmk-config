@@ -30,13 +30,13 @@
   combos {
     compatible = "zmk,keymap";
 
-    combo_esc = {
+    combo_esc {
       timeout-ms = <50>;
       key-positions = <16 17>;
       bindings = <&kp ESC>;
     }
 
-    combo_enter = {
+    combo_enter {
       timeout-ms = <50>;
       key-positions = <13 14>;
       bindings = <&kp ENTER>;
