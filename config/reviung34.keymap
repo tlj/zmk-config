@@ -41,8 +41,8 @@
       key-positions = <13 14>;
       bindings = <&kp ENTER>;
     };
-  }
-}
+  };
+};
 
 / {
     keymap {
