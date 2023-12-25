@@ -9,11 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define DEFAULT 0
-#define SYMBOL 1
-#define NUMBER 2
-#define NAVI 3
-#define MEDIA 4
+#define L_DEF 0
+#define L_SYM 1
+#define L_NUM 2
+#define L_NAV 3
+#define L_MED 4
 
 / {
     chosen {
@@ -28,7 +28,7 @@
 
 / {
   combos {
-    compatible = "zmk,keymap";
+    compatible = "zmk,combos";
 
     combo_esc {
       timeout-ms = <50>;
@@ -52,16 +52,16 @@
             display-name = "Base";
             bindings = <
 &kp Q       &kp W       &kp E      				&kp R          		&kp T       &kp Y      			&kp U         &kp I          &kp O         &kp P
-&mt LALT A  &mt LCTRL S &mt LCMD D 				&mt LSHIFT F   		&lt NAVI G	&lt NUMBER H		&mt RSHIFT J  &mt RCMD K     &mt RCTRL     &mt RCTRL SEMI
-&kp Z       &kp X       &kp C      				&kp V          		&kp B       &kp N      			&kp M         &kp COMMA      &mt DOT       &kp ENTER
-                        &lt MEDIA BSPC  	&lt SYMBOL SPACE	&kp TAB     &lt SYMBOL SPACE 
+&mt LALT A  &mt LCTRL S &mt LCMD D 				&mt LSHIFT F   		&lt L_NAV G	&lt L_NUM H			&mt LSHIFT J  &mt LCMD K     &mt LCTRL L   &mt LALT SEMI
+&kp Z       &kp X       &kp C      				&kp V          		&kp B       &kp N      			&kp M         &kp COMMA      &kp DOT       &kp ENTER
+                        &lt L_MED BSPC  	&lt L_SYM SPACE		&kp TAB     &lt L_SYM SPACE 
             >;
         };
 
         symbol {
           display-name = "Symbol";
           bindings = <
-&none       &kp PERC    &kp LBRC    &kp RBRC      &kp CARET   &kp AMPS    &kp GRAVE    &kp APOS       &none         &none
+&none				&kp PRCNT		&kp LBRC    &kp RBRC      &kp CARET   &kp AMPS    &kp GRAVE    &kp APOS       &none         &none
 &kp LSHIFT  &kp AT      &kp LPAR    &kp RPAR      &kp DOLLAR  &kp SLASH   &kp COLON    &kp EQUAL      &kp DQT       &kp RSHIFT
 &none       &kp EXCL    &kp LBKT    &kp RBKT      &kp STAR    &kp PIPE    &kp BSLH     &kp MINUS      &kp UNDER     &none
                         &none       &none         &none       &none
